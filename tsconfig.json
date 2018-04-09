@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    // leave JSX as it is
+    "jsx": "preserve",
+    // resolve modules as you would expect
+    "moduleResolution": "node",
+    // leave imports as they are
+    "module": "esnext",
+    // do not transpile stuff like classes, async/await, ...
+    "target": "esnext",
+    // produce a source map
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "containers/*": ["./src/containers/*"]
+    }
+  },
+  "include": [
+      "./src/**/*"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
