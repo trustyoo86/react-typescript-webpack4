@@ -1,6 +1,6 @@
 # react-typescript-webpack4
 
-React + Typescript example using webpack 4
+React + Typescript example using webpack 4.<br/>
 This example should installed rimraf npm modules globally.
 
 ## Usage
