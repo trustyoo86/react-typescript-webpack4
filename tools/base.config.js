@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
+
+const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -7,8 +9,19 @@ module.exports = {
     'vendor': ['react', 'react-dom'],
     'app': path.resolve(__dirname, '..', 'src', 'App.tsx'),
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'initial',
+          name: 'vendor',
+          enforce: true,
+        },
+      },
+    },
+  },
   output: {
-    filename: '[name].[chunkhash].js',
+    // filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
   resolve: {
@@ -34,11 +47,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: require.resolve('awesome-typescript-loader'),
-            options: {
-              // compile with TypeScript, then transpile with Babel
-              useBabel: true,
-            },
+            loader: 'ts-loader',
           },
         ],
       },
@@ -46,9 +55,14 @@ module.exports = {
   },
   // plugins
   plugins: [
+    new ManifestPlugin({
+      fileName: 'assets.json',
+      basePath: '/',
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+      inject: 'body',
     }),
   ],
 };

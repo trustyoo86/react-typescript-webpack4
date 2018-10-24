@@ -1,14 +1,15 @@
-import * as React from 'react';
+'use strict'
+import * as React from 'react'
 
 interface IProps {
   children?: any,
-};
+}
 
-interface IState {};
+interface IState {}
 
 class Layout extends React.Component<IProps, IState> {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -16,8 +17,8 @@ class Layout extends React.Component<IProps, IState> {
       <div>
         { this.props.children }
       </div>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout

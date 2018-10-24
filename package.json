@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "awesome-typescript-loader": "^5.0.0",
+    "mobx": "^5.5.1",
+    "mobx-react": "^5.3.2",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-loadable": "^5.3.1",
@@ -28,9 +30,10 @@
     "@types/mocha": "^5.0.0",
     "@types/react": "^16.3.5",
     "@types/react-dom": "^16.0.4",
-    "@types/react-router-dom": "^4.2.6",
+    "@types/react-router-dom": "^4.3.1",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -52,8 +55,10 @@
     "karma-webpack": "^3.0.0",
     "mocha": "^5.0.5",
     "path": "^0.12.7",
+    "ts-loader": "^5.2.2",
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.1",
+    "webpack-manifest-plugin": "^2.0.4",
     "webpack-merge": "^4.1.2"
   },
   "ava": {

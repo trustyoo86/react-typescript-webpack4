@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
     // leave JSX as it is
-    "jsx": "preserve",
+    "jsx": "react",
     // resolve modules as you would expect
     "moduleResolution": "node",
     // leave imports as they are
-    "module": "esnext",
+    "module": "commonjs",
     // do not transpile stuff like classes, async/await, ...
-    "target": "esnext",
+    "target": "es5",
+    "lib": [
+      "es2015", "es6", "esnext", "dom"
+    ],
     // produce a source map
     "sourceMap": true,
     "baseUrl": ".",
@@ -15,7 +18,9 @@
     "paths": {
       "components/*": ["./src/components/*"],
       "containers/*": ["./src/containers/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "keyofStringsOnly": true
   },
   "include": [
       "./src/**/*"

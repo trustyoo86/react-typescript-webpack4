@@ -1,16 +1,20 @@
-import Loadable from 'react-loadable';
+'use strict'
 
-const Home = Loadable({
-  loader: () => import('components/home/Home'),
-  loading: () => null,
-});
+import * as React from 'react'
+import * as Loadable from 'react-loadable'
 
-const About = Loadable({
-  loader: () => import('components/about/About'),
-  loading: () => null,
-});
+const Loading = () => {
+  return (
+    <h3>Loading...</h3>
+  )
+}
 
-export default {
-  Home,
-  About
-};
+export const Home = Loadable({
+  loader: () => import(/* webpackChunkName: "home" */ 'components/home/Home'),
+  loading: Loading,
+})
+
+export const About = Loadable({
+  loader: () => import(/* webpackChunkName: "about" */ 'components/about/About'),
+  loading: Loading,
+})
