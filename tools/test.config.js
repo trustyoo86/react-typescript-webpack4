@@ -1,3 +1,4 @@
+import 'babel-register';
 import 'babel-polyfill';
 import enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

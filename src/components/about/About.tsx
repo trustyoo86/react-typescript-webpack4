@@ -1,4 +1,5 @@
-import * as React from 'react';
+'use strict'
+import * as React from 'react'
 
 interface IProps {
 
@@ -10,7 +11,7 @@ interface IState {
 
 class About extends React.PureComponent<IProps, IState> {
   constructor(props: IProps) {
-    super(props);
+    super(props)
   }
 
   render(): React.ReactChild {
@@ -18,8 +19,8 @@ class About extends React.PureComponent<IProps, IState> {
       <div>
         About
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

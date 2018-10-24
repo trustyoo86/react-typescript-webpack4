@@ -1,21 +1,21 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // components
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/Layout'
 
 // router
-import Routes from './Routes';
+import { Home, About } from './Routes'
 
 ReactDOM.render(
   <Router>
     <Layout>
       <Switch>
-        <Route path='/' component={ Routes.Home } />
-        <Route path='about' component={ Routes.About } />
+        <Route exact path='/' component={ Home } />
+        <Route exact path='/about' component={ About } />
       </Switch>
     </Layout>
   </Router>,
   document.getElementById('root')
-);
+)

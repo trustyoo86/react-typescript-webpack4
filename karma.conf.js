@@ -9,7 +9,7 @@ module.exports = function (config) {
     // files
     files: [
       // { pattern: 'node_modules/babel-polyfill/browser.js', instrument: false },
-      './tools/webpack.test.config.js',
+      './tools/test.config.js',
     ],
     reporters: ['verbose'],
     preprocessors: {

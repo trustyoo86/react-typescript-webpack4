@@ -1,7 +1,10 @@
-import * as React from 'react';
+'use strict'
+
+import * as React from 'react'
+import { withRouter } from 'react-router-dom'
 
 interface IProps {
-
+  history?: any,
 }
 
 interface IState {
@@ -10,16 +13,28 @@ interface IState {
 
 class Home extends React.Component<IProps, IState> {
   constructor(props: IProps) {
-    super(props);
+    super(props)
+
+    this.clickHandler = this.clickHandler.bind(this)
+  }
+
+  clickHandler() {
+    const { history } = this.props
+    history.push('about')
   }
 
   render() {
     return (
       <div>
         Home
+        <button onClick={this.clickHandler}>
+          move to About!!
+        </button>
       </div>
-    );
+    )
   }
 }
 
-export default Home;
+const HomePage = (props: any) => <Home {...props} />
+
+export default withRouter(HomePage)
