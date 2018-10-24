@@ -1,5 +1,14 @@
 'use strict'
 import * as React from 'react'
+import styled from 'styled-components'
+
+const styles = {
+  container: styled.div`
+    width: 100%;
+    height: 100%;
+    background: #bdbdbd;
+  `,
+}
 
 interface IProps {
   children?: any,
@@ -14,9 +23,9 @@ class Layout extends React.Component<IProps, IState> {
 
   render() {
     return (
-      <div>
+      <styles.container>
         { this.props.children }
-      </div>
+      </styles.container>
     )
   }
 }

@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 const webpack = require('webpack');
 const path = require('path');
 
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -51,10 +53,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+      },
     ],
   },
   // plugins
   plugins: [
+    new ExtractTextPlugin({
+      filename: 'app.css',
+    }),
     new ManifestPlugin({
       fileName: 'assets.json',
       basePath: '/',
@@ -62,7 +75,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      inject: 'body',
     }),
   ],
 };
