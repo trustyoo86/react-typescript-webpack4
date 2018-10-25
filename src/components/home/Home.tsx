@@ -7,11 +7,7 @@ interface IProps {
   history?: any,
 }
 
-interface IState {
-
-}
-
-class Home extends React.Component<IProps, IState> {
+class Home extends React.Component<IProps> {
   constructor(props: IProps) {
     super(props)
 

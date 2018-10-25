@@ -17,7 +17,8 @@
     "outDir": "dist",
     "paths": {
       "components/*": ["./src/components/*"],
-      "containers/*": ["./src/containers/*"]
+      "containers/*": ["./src/containers/*"],
+      "assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true

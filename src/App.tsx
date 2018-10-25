@@ -1,6 +1,6 @@
 'use strict'
 
-require('./styles/reset.css')
+require('assets/styles/main.scss')
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'

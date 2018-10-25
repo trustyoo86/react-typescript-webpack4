@@ -4,9 +4,12 @@ import styled from 'styled-components'
 
 const styles = {
   container: styled.div`
-    width: 100%;
-    height: 100%;
-    background: #bdbdbd;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #efefef;
   `,
 }
 

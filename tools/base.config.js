@@ -31,6 +31,7 @@ module.exports = {
     alias: {
       'components': path.resolve(__dirname, '..', 'src', 'components'),
       'containers': path.resolve(__dirname, '..', 'src', 'containers'),
+      'assets': path.resolve(__dirname, '..', 'src', 'assets'),
     },
   },
   module: {
@@ -60,6 +61,26 @@ module.exports = {
           fallback: 'style-loader',
           use: 'css-loader',
         }),
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
