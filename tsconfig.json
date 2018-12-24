@@ -18,7 +18,9 @@
     "paths": {
       "components/*": ["./src/components/*"],
       "containers/*": ["./src/containers/*"],
-      "assets/*": ["./src/assets/*"]
+      "assets/*": ["./src/assets/*"],
+      "constants/*": ["./constants/*"],
+      "utils/*": ["./src/utils/*"]
     },
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true
