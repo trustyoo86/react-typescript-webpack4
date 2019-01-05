@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 import { Button, Grid } from '@material-ui/core'
 
 // components
+import Header from 'components/common/header/Header'
 import Layout from 'components/common/Layout'
 
 interface IProps {
@@ -27,6 +28,7 @@ class Home extends React.Component<IProps> {
     return (
       <Layout>
         <Grid item xs={12}>
+          <Header />
           <Button variant='contained' color='primary'>
             move to About!
           </Button>
