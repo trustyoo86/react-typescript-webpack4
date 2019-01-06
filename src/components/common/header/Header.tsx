@@ -37,7 +37,7 @@ class Header extends React.Component<IProps, IState> {
             <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
             </IconButton>
             <Typography variant='h6' color='inherit' className={classes.grow}>
-              News
+              My Git
             </Typography>
             <Button color='inherit'>Login</Button>
           </Toolbar>
