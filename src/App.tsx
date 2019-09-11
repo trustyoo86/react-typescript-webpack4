@@ -14,15 +14,17 @@ import Layout from 'components/common/Layout'
 import { Home, About } from './Routes'
 
 ReactDOM.render(
-  <Provider>
-    <Router>
-      <Layout>
-        <Switch>
-          <Route exact path='/' component={ Home } />
-          <Route exact path='/about' component={ About } />
-        </Switch>
-      </Layout>
-    </Router>
-  </Provider>,
+  // <Provider>
+  //   <Router>
+  //     <Layout>
+  //       <Switch>
+  //         <Route exact path='/' component={ Home } />
+  //         <Route exact path='/about' component={ About } />
+  //       </Switch>
+  //     </Layout>
+  //   </Router>
+  // </Provider>,
+  <React.Fragment>
+  </React.Fragment>
   document.getElementById('root')
 )

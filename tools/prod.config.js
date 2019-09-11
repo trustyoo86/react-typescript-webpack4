@@ -1,6 +1,7 @@
+'use strict';
 const merge = require('webpack-merge');
-const config = require('./base.config');
+const base = require('./base.config');
 
-module.exports = merge(config, {
+module.exports = merge(base, {
   mode: 'production',
 });

@@ -9,7 +9,7 @@
     // do not transpile stuff like classes, async/await, ...
     "target": "es5",
     "lib": [
-      "dom", "es2015", "es6", "esnext"
+      "es2015", "es6", "esnext", "dom"
     ],
     "allowJs": true,
     // produce a source map

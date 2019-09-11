@@ -1,7 +1,9 @@
-const merge = require('webpack-merge');
-const config = require('./base.config');
+'use strict';
 
-module.exports = merge(config, {
+const merge = require('webpack-merge');
+const base = require('./base.config');
+
+module.exports = merge(base, {
   mode: 'development',
   devtool: 'cheap-eval-sourcemap',
   devServer: {
