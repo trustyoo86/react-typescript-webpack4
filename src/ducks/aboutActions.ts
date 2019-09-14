@@ -30,7 +30,7 @@ export default handleActions({
 
     return state.set('counters', counters.push(
       Map({
-        color: action.payload,
+        color: 'white',
         number: 0,
       })
     ))
