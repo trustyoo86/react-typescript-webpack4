@@ -7,11 +7,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Provider } from 'mobx-react'
 import { ThemeProvider } from 'styled-components'
 
+import Counter from './containers/Counter'
+
 // components
 import Layout from 'components/common/Layout'
 
 // router
 import { Home, About } from './Routes'
+
 
 ReactDOM.render(
   // <Provider>
@@ -25,6 +28,7 @@ ReactDOM.render(
   //   </Router>
   // </Provider>,
   <React.Fragment>
-  </React.Fragment>
+    <Counter />
+  </React.Fragment>,
   document.getElementById('root')
 )
