@@ -21,16 +21,16 @@ const initialState = Map({
 })
 
 interface IAction {
-  type?: string,
+  payload?: any,
 }
 
 export default handleActions({
-  [LOAD]: (state, action) => {
+  [LOAD]: (state, action: IAction) => {
     const counters = state.get('counters')
 
     return state.set('counters', counters.push(
       Map({
-        color: 'white',
+        color: action.payload,
         number: 0,
       })
     ))
