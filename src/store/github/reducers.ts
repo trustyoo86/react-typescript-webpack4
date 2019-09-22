@@ -16,6 +16,7 @@ export function profileReducer (
   switch (action.type) {
     case GET_PROFILE:
       return {
+        ...state,
         profile: action.payload
       };
     case UPDATE_PROFILE:
