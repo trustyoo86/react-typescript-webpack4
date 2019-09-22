@@ -1,16 +1,22 @@
 export interface Profile {
-  id?: string
+  id?: string;
 }
 
 export interface ProfileState {
-  profile: Profile
+  profile: Profile;
 }
 
-export const GET_PROFILE = 'GET_PROFILE'
+export const GET_PROFILE = 'GET_PROFILE';
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
 
 interface GetProfileAction {
-  type: typeof GET_PROFILE
-  payload: Profile
+  type: typeof GET_PROFILE;
+  payload: Profile;
 }
 
-export type ProfileActionTypes = GetProfileAction
+interface UpdateProfileAction {
+  type: typeof UPDATE_PROFILE;
+  payload: Profile;
+}
+
+export type ProfileActionTypes = GetProfileAction | UpdateProfileAction;
