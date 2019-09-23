@@ -1,25 +1,39 @@
-require('assets/styles/main.scss');
+// styles
+import 'assets/styles/main.scss';
+// plugins
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import configureStore from './store';
 import { ThemeProvider } from 'styled-components';
 
 // components
 import Layout from 'components/common/Layout';
 import Profile from 'containers/Profile';
 
-// router
-import { Home, About } from './Routes';
+// stores
+import configureStore from './store';
 
+// document declaration
+declare const document: any;
+
+//  configure store
 const store = configureStore();
+
+// styled-components theme
+const theme = {
+  background: '#c5c5c5',
+};
 
 const Root = () => {
   return (
     <Provider store={store}>
-      <Profile />
-    </Provider> 
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Profile />
+        </Layout>
+      </ThemeProvider>
+    </Provider>
   );
 };
 
