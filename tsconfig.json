@@ -21,7 +21,8 @@
       "containers/*": ["./src/containers/*"],
       "assets/*": ["./src/assets/*"],
       "constants/*": ["./constants/*"],
-      "utils/*": ["./src/utils/*"]
+      "utils/*": ["./src/utils/*"],
+      "store/*": ["./src/store/*"]
     },
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true
