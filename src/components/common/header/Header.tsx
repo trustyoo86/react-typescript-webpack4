@@ -1,13 +1,14 @@
-'use strict'
-
-import * as React from 'react'
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles'
+/**
+ * Header component
+ */
+// plugins
+import * as React from 'react';
+import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 interface IProps {
-  classes: any,
+  classes: any;
 }
-interface IState {}
 
 const styles = {
   root: {
@@ -20,31 +21,24 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-}
+};
 
-class Header extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props)
-  }
-
-  render() {
-    const { classes } = this.props
-
-    return (
-      <div className={classes.root}>
-        <AppBar position='static'>
-          <Toolbar>
-            <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
-            </IconButton>
-            <Typography variant='h6' color='inherit' className={classes.grow}>
-              My Git
-            </Typography>
-            <Button color='inherit'>Login</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
+const Header = (props: IProps) => {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
+          </IconButton>
+          <Typography variant='h6' color='inherit' className={classes.grow}>
+            My Profile
+          </Typography>
+          <Button color='inherit'>Login</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
 
 export default withStyles(styles)(Header)

@@ -5,7 +5,7 @@ const base = require('./base.config');
 
 module.exports = merge(base, {
   mode: 'development',
-  devtool: 'cheap-eval-sourcemap',
+  devtool: '#source-map',
   devServer: {
     port: 9000,
   },
