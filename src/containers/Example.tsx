@@ -23,7 +23,7 @@ const Profile = (props) => {
    * Hooks using react-redux
    */
   const dispatch = useDispatch();
-  const profile = useSelector((state: AppState) => state.example.profile);
+  const profile = useSelector((store: AppState) => store.example.profile);
 
   let [counter, setCounter] = useState(0);
 
