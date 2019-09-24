@@ -10,6 +10,7 @@ import { ThemeProvider } from 'styled-components';
 // components
 import Layout from 'components/common/Layout';
 import Profile from 'containers/Profile';
+import Example from 'containers/Example';
 
 // stores
 import configureStore from './store';
@@ -30,7 +31,7 @@ const Root = () => {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Layout>
-          <Profile />
+          <Example />
         </Layout>
       </ThemeProvider>
     </Provider>
