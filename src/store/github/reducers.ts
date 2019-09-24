@@ -6,7 +6,9 @@ import {
 } from './types';
 
 const initialState: ProfileState = {
-  profile: {},
+  profile: {
+    id: 'initial',
+  },
 };
 
 export function profileReducer (
@@ -17,12 +19,12 @@ export function profileReducer (
     case GET_PROFILE:
       return {
         ...state,
-        ...action.payload
+        profile: action.payload
       };
     case UPDATE_PROFILE:
       return {
         ...state,
-        ...action.payload,
+        profile: action.payload,
       };
     default:
       return state;
