@@ -4,9 +4,11 @@ import thunkMiddleware from 'redux-thunk';
 
 // reducers
 import { profileReducer } from './github/reducers';
+import { exampleReducer } from './ducks/profile';
 
 const rootReducer = combineReducers({
   profile: profileReducer,
+  example: exampleReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
