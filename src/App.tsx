@@ -3,13 +3,16 @@ import 'assets/styles/main.scss';
 // plugins
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
+// Routes
+import { Login, Profile } from './Routes';
+
 // components
 import Layout from 'components/common/Layout';
-import Profile from 'containers/Profile';
+// import Profile from 'containers/Profile';
 import Example from 'containers/Example';
 
 // stores
@@ -31,7 +34,13 @@ const Root = () => {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Layout>
-          <Example />
+          <Router>
+            <Switch>
+              <Route exact path='/' component={Login} />
+              <Route path='/profile' component={Profile} />
+            </Switch>
+          </Router>
+          {/* <Example /> */}
         </Layout>
       </ThemeProvider>
     </Provider>
