@@ -12,6 +12,16 @@
     "dev": "npm run clean && webpack-dev-server --config ./tools/dev.config.js",
     "prod": "npm run clean && webpack --config ./tools/prod.config.js"
   },
+  "keywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "es6",
+    "webpack",
+    "enzyme",
+    "hook",
+    "react-router"
+  ],
   "dependencies": {
     "@material-ui/core": "^3.8.1",
     "@types/node": "^12.7.5",
