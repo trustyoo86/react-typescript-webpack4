@@ -15,8 +15,8 @@ const styles = {
     background: ${props => props.theme.background};
   `,
   content: styled.div`
-    width: 100%;
-    padding: 50px;
+    /* width: 100%;
+    padding: 50px; */
   `
 };
 
